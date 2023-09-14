@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Semana09-S2</title>
+</head>
+<body class="bg-warning">
+    <div class="container mt-4 mb-4">
+        <h1 class="text-center mb-4 text-bg-dark rounded-2 p-3">Ejercicios Semana 09 - S2</h1>
+
+        <!-- Preguntas -->
+        <div class="card rounded-2 p-3">
+            <div class="card-title">
+                <h2>1. Que son los arrays , definicion ejemplo de cada tipo de dato (incluyendo indices)</h2>
+            </div>
+            <div class="card-body">
+                <p>Es una colección o agrupación de elementos en una misma variable, cada uno de ellos ubicado por la posición que ocupa en el array</p>
+                <h4>Ejemplos:</h4>
+                <p>const arrays = {'Marco',28,true,1.81}</p>
+                <p>console.log(arrays[0],arrays[1],arrays[2],arrays[3])</p>
+                <p>Devuelve: Marco 28 true 1.81</p>
+            </div>
+        </div>
+
+        <div class="card rounded-2 p-3 mt-3">
+            <div class="card-title">
+                <h2>2. Que tipos de datos podemos agregar en los arrays(con ejemplos)</h2>
+            </div>
+            <div class="card-body">
+                <p>Se puede agregar diferentes tipos de datos en un arreglo, o simplemente de un sólo tipo. JavaScript nos dá esa flexibilidad.</p>
+                <h4>Ejemplos:</h4>
+                <p><b>Arrays de Strings =></b> const nombres = ['Marco','Luis','Roberto']</p>
+                <p><b>Arrays de Numbers =></b> const edades = [25,26,48]</p>
+                <p><b>Arrays de Varios =></b> const varios = ['Marco',25,true]</p>
+                <p><b>Arrays de Objetos =></b> const persona = [{dni:'45856869',nombre:'Marco'},{dni:'65898596',nombre:'Luis'}]</p>
+            </div>
+        </div>
+
+        <div class="card rounded-2 p-3 mt-3">
+            <div class="card-title">
+                <h2>3. Explicar los metodos o metodo enseniado en clase para los arreglos(definicion y ejemplo)</h2>
+            </div>
+            <div class="card-body">
+                <h4>Ejemplo:</h4>
+                <p><b>length:</b> este método devuelve la cantidad de elementos de un arreglo.</p>
+                <p>const muebles = ['sillas','ropero','mesa','cuadro'];</p>
+                <p>muebles.length //Cantidad de elementos: 4</p>
+            </div>
+        </div>
+
+        <div class="card rounded-2 p-3 mt-3">
+            <div class="card-title">
+                <h2>4. Como acceder a cada elemento del arreglo(definicion y ejemplo)</h2>
+            </div>
+            <div class="card-body">
+                <p>Se puede acceder por la posición del elemento.</p>
+                <h4>Ejemplo:</h4>
+                <p>const muebles = ['sillas','ropero','mesa','cuadro'];</p>
+                <p>console.log(muebles[2]); //Devuelve: 'mesa'</p>
+            </div>
+        </div>
+        
+        <div class="card rounded-2 p-3 mt-3">
+            <div class="card-title">
+                <h2>5. Que son los arreglos bidimensionales( definicion y ejemplo)</h2>
+            </div>
+            <div class="card-body">
+                <p>Los arreglos bidimensionales, es cuando un arreglo se encuentra dentro de otro arreglo.</p>
+                <h4>Ejemplo:</h4>
+                <p>const productos = ['leche','pescado','huevo',['sal','pimienta','comino']]</p>
+            </div>
+        </div>
+
+        <div class="card rounded-2 p-3 mt-3">
+            <div class="card-title">
+                <h2>6. Como iterar los arreglos , de manera imperativa(for) y de manera declarativa (map y forEach)</h2>
+            </div>
+            <div class="card-body">
+                <h4>Ejemplo:</h4>
+                <p><b>Manera Imperativa:</b> FOR</p>
+                <p>for(let i=0, i < arreglo.lenght, i++) { }</p>
+                <p><b>Manera Declarativa:</b> MAP y FOREACH</p>
+                <p>muebles.foreach(function(mueble){ console.log(mueble); });</p>
+                <p>muebles.map(function(mueble){ console.log(mueble); });</p>
+            </div>
+        </div>
+
+        <div class="card rounded-2 p-3 mt-3">
+            <div class="card-title">
+                <h2>7. Diferencias con ejemplos de map y forEach</h2>
+            </div>
+            <div class="card-body">
+                <h4>Ejemplos:</h4>
+                <p><b>FOREACH</b></p>
+                <p>Recorre un arreglo</p>
+                <p>muebles.foreach(function(mueble){ console.log(mueble); });</p>
+                <p><b>MAP</b></p>
+                <p>Recorre un arreglo, pero este se puede guardar en una variable, generando otro arreglo.</p>
+                <p>const misMuebles = muebles.foreach(function(mueble){ return mueble.toUpperCase(); });</p>
+            </div>
+        </div>
+
+        <div class="card rounded-2 p-3 mt-3">
+            <div class="card-title">
+                <h2>8. Crear un array de numeros(minimo de 5 elementos) y devolver el promedio.</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <p>Numero 1:</p>
+                        <input id="txtNumero1" type="number" placeholder="Ingrese Num. 1" class="form-control">
+                    </div>
+                    <div class="col">
+                        <p>Numero 2:</p>
+                        <input id="txtNumero2" type="number" placeholder="Ingrese Num. 2" class="form-control">
+                    </div>
+                    <div class="col">
+                        <p>Numero 3:</p>
+                        <input id="txtNumero3" type="number" placeholder="Ingrese Num. 3" class="form-control">
+                    </div>
+                    <div class="col">
+                        <p>Numero 4:</p>
+                        <input id="txtNumero4" type="number" placeholder="Ingrese Num. 4" class="form-control">
+                    </div>
+                    <div class="col">
+                        <p>Numero 5:</p>
+                        <input id="txtNumero5" type="number" placeholder="Ingrese Num. 5" class="form-control">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <button id="btnPromedio" type="button" class="btn btn-success mt-2">Calcular Promedio</button>
+                </div>
+                <div id="alerta" class="alert alert-success mt-2" role="alert">
+                    El promedio es:
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
